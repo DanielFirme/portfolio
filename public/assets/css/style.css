@@ -5,7 +5,10 @@
 }
 
 header {
-    height: 50px;
+    
+    background-color: #f7f7f7;
+    padding: 20px;
+    height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -13,6 +16,12 @@ header {
     top: 0;
     left: 0;
     right: 0;
+}
+
+header div h1 {
+    font-family: 'Michroma', sans-serif;
+    font-size: 26px;
+    letter-spacing: 3px;
 }
 
 header h1, nav ul {
