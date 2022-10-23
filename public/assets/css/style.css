@@ -5,17 +5,18 @@
 }
 
 header {
-    width: 100vw;
     height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
 }
 
 header h1, nav ul {
-    margin: 0 40px 0 20px;
+    margin: 0 20px 0 20px;
 }
 
 nav ul {
@@ -34,7 +35,7 @@ nav a {
 
 section {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
 }
 
 #hm {
