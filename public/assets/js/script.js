@@ -7,7 +7,7 @@ $$('header a').forEach(a=>{
         e.preventDefault();
         const positionScroll = $(`${e.target.getAttribute('href')}`).offsetTop;
         window.scrollTo({
-            top: (positionScroll - 50),
+            top: (positionScroll - 60),
             left: 0,
             behavior: "smooth"
         });
