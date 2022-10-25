@@ -164,7 +164,7 @@ section {
     height: 80%;
     width: 800px;
     margin-left: 80px;
-    background-color: rgba(0, 0, 0, .3);
+    background-color: rgba(0, 0, 0, .9);
     align-items: center;
 }
 .am-di-img {
@@ -173,10 +173,11 @@ section {
     background-image: linear-gradient(to right,#FFF, #f1ecf0);
     height: 200px;
     width: 200px;
+    margin-left: 70px;
     border-radius: 50%;
-    border: 7px solid #5599FF;
-    overflow: hidden;
-    
+    border: 3px solid #4d4d4d;
+    box-shadow: 0px 0px 10px #4d4d4d;
+    overflow: hidden;    
 }
 
 .am-di-img img {
