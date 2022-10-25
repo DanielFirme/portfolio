@@ -1,6 +1,7 @@
 "use strict";
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
+let mousePositionY;
 
 $$('header a').forEach(a=>{
     a.addEventListener('click', (e)=>{
@@ -16,16 +17,17 @@ $$('header a').forEach(a=>{
     });
 });
 
-window.addEventListener('scroll', (e)=>{
-    if(window.scrollY >= 10 && e.clientY >= 80){
+window.addEventListener('scroll', ()=>{
+    if(window.scrollY >= 10 && mousePositionY >= 80){
         $('header').style.top = '-80px';
-    }else {
+    }else{
         $('header').style.top = '0';
     }
 });
 
 window.addEventListener('mousemove', (e)=>{
-    if(e.clientY >= 80 && window.scrollY >= 10){
+    mousePositionY = e.clientY;
+    if(mousePositionY >= 80 && window.scrollY >= 10){
         $('header').style.top = '-80px';
     }else {
         $('header').style.top = '0';
