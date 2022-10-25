@@ -20,14 +20,17 @@ header {
     transition: all .5s ease;
 }
 
-header div h1 {
+header .logo a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
     font-family: 'Michroma', sans-serif;
     color: #0b0c15;
-    font-size: 26px;
+    font-size: 24px;
     letter-spacing: 3px;
 }
 
-header h1, nav ul {
+header .logo a, nav ul {
     margin: 0 20px 0 20px;
 }
 
