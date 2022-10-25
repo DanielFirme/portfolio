@@ -159,11 +159,29 @@ section {
 .am-di {
     display: flex;
     height: 80%;
-    width: 700px;
-    margin-left: 50px;
-    background-color: rgba(0, 0, 0, .5);
+    width: 800px;
+    margin-left: 80px;
+    background-color: rgba(0, 0, 0, .3);
+    align-items: center;
 }
+.am-di-img {
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(to right,#FFF, #f1ecf0);
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 7px solid #5599FF;
+    overflow: hidden;
+    
+}
+
+.am-di-img img {
+    object-fit: cover;
+}
+
 .am-desc {
+    flex: 1;
     display: flex;
     padding: 70px;
     color:#c5E0dc;
@@ -172,5 +190,5 @@ section {
     font-weight: 400;
     letter-spacing: 1.2px;
     /*box-shadow: 0px 0px 10px #4d4d4d;
-    border-radius: 10px;
+    border-radius: 10px;*/
 }
