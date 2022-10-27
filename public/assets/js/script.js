@@ -1,12 +1,13 @@
-"use strict";
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
+
+
 let mousePositionY, mousePositionX;
 
 $$('header a').forEach(a=>{
     a.addEventListener('click', (e)=>{
         e.preventDefault();
-        $('.m--active').classList.remove('m--active');
+        $('li.m--active').classList.remove('m--active');
         e.target.parentNode.classList.add('m--active');
         const positionScroll = $(`${e.target.getAttribute('href')}`).offsetTop;
         window.scrollTo({
@@ -23,17 +24,9 @@ window.addEventListener('scroll', ()=>{
 
     if(mousePositionX >= document.body.clientWidth){
         mousePositionY = -($('body').getBoundingClientRect().top);
-        if(mousePositionY >= 80){
-            $('header').style.top = '-80px';
-        } else {
-            $('header').style.top = '0'; 
-        } 
+        (mousePositionY >= 80) ? $('header').style.top = '-80px' : $('header').style.top = '0'; 
     }else {
-        if(mousePositionY >= 80 && window.scrollY >= 80){
-            $('header').style.top = '-80px';
-        } else {
-            $('header').style.top = '0';
-        }
+        (mousePositionY >= 80 && window.scrollY >= 80) ? $('header').style.top = '-80px' : $('header').style.top = '0';
     } 
 });
 
