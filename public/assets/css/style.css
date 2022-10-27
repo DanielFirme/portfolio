@@ -260,6 +260,7 @@ section {
     width: 32.5%;
     box-shadow: 0px 0px 10px #a3a8aa;
     border-radius: 10px;
+    transition: all 0.3s ease;
 }
 
 .sv--img img {
@@ -284,6 +285,10 @@ section {
     font-weight: 400;
     margin-bottom: 10px;
     text-align: justify;
+}
+
+.sv-info:hover {
+    transform: scale(1.05);
 }
 
 
