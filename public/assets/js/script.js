@@ -7,9 +7,9 @@ let mousePositionY, mousePositionX;
 $$('header a').forEach(a=>{
     a.addEventListener('click', (e)=>{
         e.preventDefault();
-        $('li.m--active').classList.remove('m--active');
-        e.target.parentNode.classList.add('m--active');
-        const positionScroll = $(`${e.target.getAttribute('href')}`).offsetTop;
+        const hrefAMenu = e.target.getAttribute('href');
+        menuItemActive(hrefAMenu);
+        const positionScroll = $(`${hrefAMenu}`).offsetTop;
         window.scrollTo({
             top: positionScroll,
             left: 0,
@@ -20,7 +20,7 @@ $$('header a').forEach(a=>{
 
 window.addEventListener('scroll', ()=>{
     
-    itemMenuActiveScroll();
+    menuItemActiveScroll();
 
     if(mousePositionX >= document.body.clientWidth){
         mousePositionY = -($('body').getBoundingClientRect().top);
@@ -40,7 +40,7 @@ window.addEventListener('mousemove', (e)=>{
     }
 });
 
-function itemMenuActiveScroll() {
+function menuItemActiveScroll() {
     const hrefAMenu = [...$$('section')].map(e => {
         if(e.getBoundingClientRect().top >= -125 && e.getBoundingClientRect().top < 125){
             return `#${e.getAttribute('id')}`;
@@ -50,8 +50,12 @@ function itemMenuActiveScroll() {
     }).join('');
     
     if(hrefAMenu !== ''){
-        $('.m--active').classList.remove('m--active');
-        $( `a[href="${hrefAMenu}"]`).parentNode.classList.add('m--active');
+        menuItemActive(hrefAMenu);
     }
+}
+
+function menuItemActive(hrefAMenu){
+    $('li.m--active').classList.remove('m--active');
+    $( `li a[href="${hrefAMenu}"]`).parentNode.classList.add('m--active');
 }
 
