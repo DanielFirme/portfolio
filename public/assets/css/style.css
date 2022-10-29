@@ -372,3 +372,53 @@ section {
     font-weight: 600;
 }
 
+#pj {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slider--controls {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slider--control img {
+    width: 45px;
+}
+
+.slider--control:first-child img {
+    transform: rotate(180deg);
+}
+
+.slider {
+    overflow: hidden;
+    height: 60%;
+    width: 80%;
+    margin:25px;
+    background-color: rgba(234, 238, 238, 0.3);
+    box-shadow: 1px 1px 10px #bbc1c4;
+    margin-top: 50px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.slider--width {
+    height: 100%;
+    width: 2400px;
+    display: flex;
+}
+
+.slider--item {
+    flex: 1;
+    margin: 10px 0 10px 10px;
+    background-size: cover;
+    background-position: center;
+}
