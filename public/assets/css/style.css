@@ -423,11 +423,15 @@ section {
     background-position: center;
 }
 
+#ct {
+    align-items: center;
+}
 
 .ct--gp {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 30px 100px 0 100px;
     height: 100%;
     width: 100%;
 }
