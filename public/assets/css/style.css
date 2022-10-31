@@ -422,3 +422,137 @@ section {
     background-size: cover;
     background-position: center;
 }
+
+
+.ct--gp {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.ct--gp--msg {
+    display: flex;
+    flex-direction: column;
+    background-color: #1d1d1d;
+    align-items: center;
+    padding: 50px 50px;
+    height: 80%;
+    width: 35%;
+    border-radius: 10px;
+}
+
+.ct--img {
+    height:100px;
+    width: 100px;
+    margin-bottom: 30px;
+}
+
+.ct--gp--msg h3 {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif, Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.ct--gp--msg p {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+form {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form--info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.form--info label, .msg--area {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.form--area {
+    height: 50px;
+    width: 50%;
+}
+
+.form--area, .msg--lb {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form--area input, .msg--lb textarea {
+    margin-top: 10px;
+    padding: 20px 0px;
+    padding-left: 5px;
+    background-color: #1d1d1d;
+    color: #f7f7f7;
+    font-family: 'Montserrat', sans-serif, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    outline: 0;
+    border: none;
+}
+
+.msg--txa {
+    height: 200px;
+    width: 100px;
+    resize: none;
+}
+
+.form--area input:focus, 
+.msg--lb textarea:focus {
+    border: 1px solid #f7f7f7;
+    border-radius: 5px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 20px 0px;
+    padding-left: 5px;
+    background-color: #187AD2;
+    color: #f7f7f7;
+    font-family: 'Montserrat', sans-serif, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    outline: 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #5599ff;
+    color: #fff;
+}
+
+footer {
+    padding: 20px 70px;
+    background-color: #000000;
+    color: #a4a4a5;
+    font-family: 'Montserrat', sans-serif, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+footer a {
+    text-decoration: none;
+    color:inherit;
+}
