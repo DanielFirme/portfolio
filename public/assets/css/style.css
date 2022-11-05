@@ -402,8 +402,6 @@ section {
     height: 50%;
     width: 80%;
     margin:25px;
-    background-color: rgba(234, 238, 238, 0.3);
-    box-shadow: 1px 1px 10px #bbc1c4;
     margin-top: 50px;
     position: relative;
     display: flex;
@@ -411,16 +409,17 @@ section {
 }
 
 .slider--width {
+    margin-left: 5px;
     height: 100%;
     display: flex;
-    transition: all ease 0.5s;
 }
 
 .slider--item {
-    margin: 10px 10px 10px 0px;
+    margin-right: 10px;
     background-size: cover;
     background-position: center;
     border-radius: 40px;
+    transition: all ease 0.5s;
 }
 
 #ct {
