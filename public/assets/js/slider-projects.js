@@ -68,7 +68,7 @@ function updateMargin(control){
         setTimeout(()=>{
             $$('.slider--item')[0].style.transition = "all ease 0.5s";
             $$('.slider--item')[0].style.marginLeft = "0px";
-        }, 0.00000000000000000000000000000000000000000001);  
+        }, 1);  
     } 
 }
 
