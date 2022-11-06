@@ -55,7 +55,7 @@ function goPrev(){
 function updateMargin(control){
     const slides = $$('.slider--item');
     if(control === 1){
-        slides[1].style.marginLeft = `-${$('.slider--item').offsetWidth + marginSlideConfig}px`;
+        slides[1].style.marginLeft = `-${widthSlideItem + marginSlideConfig}px`;
         setTimeout(()=>{
             slider.appendChild(slides[0]);
             $$('.slider--item')[slides.length - 1].style.marginLeft = "0px";
@@ -64,7 +64,7 @@ function updateMargin(control){
     if(control === 2){
         $$('.slider--item')[0].style.marginLeft = "0px";
         setTimeout(()=>{
-            slides[slides.length - 1].style.marginLeft = `-${$('.slider--item').offsetWidth + marginSlideConfig}px`;
+            slides[slides.length - 1].style.marginLeft = `-${widthSlideItem + marginSlideConfig}px`;
             slider.prepend(slides[slides.length - 1]);
         }, 100);  
     } 
@@ -78,7 +78,7 @@ setWidthSliderItems(numberSliderItems);
 setWidthSliderWidth();
 
 slider.prepend(sliderItems[sliderItems.length - 1]);
-$$('.slider--item')[0].style.marginLeft = `-${$('.slider--item').offsetWidth + marginSlideConfig}px`;
+$$('.slider--item')[0].style.marginLeft = `-${widthSlideItem + marginSlideConfig}px`;
 
 window.addEventListener('load', ()=>{
     sliderItems.forEach(item => {
