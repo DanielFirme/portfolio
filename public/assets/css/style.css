@@ -413,6 +413,8 @@ section {
 .slider {
     overflow: hidden;
     flex: 1;
+    min-height: 300px;
+    max-height: 340px;
     width: 80%;
     margin: 50px 25px 50px 25px;
     position: relative;
