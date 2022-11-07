@@ -632,14 +632,14 @@ footer a {
     
     .sv-info {
         max-height: 380px;
-        overflow: auto;
+        overflow-y: auto;
     }
 
     .form--info, .container--sv, .container--tecs {
         flex-direction: column;
     }
 
-    .container--tecs {
+    .container--tecs, .container--sv {
         margin: 25px 45px 0px 45px;
     }
 
@@ -711,6 +711,7 @@ footer a {
 
     .am-di {
         flex-direction: column;
+        margin-top: 20px;
         margin-left: 0;
     }
 
@@ -723,6 +724,16 @@ footer a {
 
     .am-desc {
         text-align: center;
+        padding: 35px;
+    }
+
+    .container--tecs, .container--sv {
+        margin: 25px 35px 0px 35px;
+    }
+
+    .sv-info {
+        margin-left: 0px;
+        margin-right: 0px;
     }
 
     #hm h1 {
