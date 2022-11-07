@@ -6,7 +6,7 @@
 
 header {
     background-color: #f7f7f7;
-    padding: 20px;
+    padding: 0px 20px;
     height: 60px;
     display: flex;
     justify-content: space-between;
@@ -115,6 +115,11 @@ section {
     letter-spacing: 2.5px;
     line-height: 55px;
     text-align: left;
+}
+
+#hm h1 span {
+    font-size: 55px; 
+    font-weight:700;
 }
 
 .hm-social-icons {
@@ -257,8 +262,9 @@ section {
     background-color:#fff;
     align-items: center;
     padding: 40px 30px;
+    margin: 10px;
     height: 95%;
-    width: 32.5%;
+    flex: 1;
     box-shadow: 0px 0px 10px #a3a8aa;
     border-radius: 10px;
     transition: all 0.2s ease;
@@ -315,7 +321,7 @@ section {
     padding: 50px;
     padding: 40px 30px;
     height: 95%;
-    width: 32.5%;
+    flex: 1;
 }
 
 .tecs--desc h3 {
@@ -343,7 +349,7 @@ section {
     flex-wrap: wrap;
     overflow: auto;
     height: 90%;
-    width: 60%;
+    flex: 2;
     margin:25px;
     background-color: rgba(234, 238, 238, 0.3);
     box-shadow: 1px 1px 10px #bbc1c4;
@@ -421,7 +427,6 @@ section {
     background-size: cover;
     background-position: center;
     border-radius: 40px;
-    transition: all ease 0.5s;
 }
 
 #ct {
@@ -566,10 +571,34 @@ footer a {
     color:inherit;
 }
 
+.menu--mobile {
+    display: none;
+    flex-direction: column;
+    height: 40px;
+    width: 40px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.mm--line {
+    background-color: #0b0c15;
+    height: 3px;
+    width: 100%;
+    border-radius: 3px;
+}
+
 @media screen and (max-width: 770px){
     
-    .form--info {
+    .form--info, .container--sv, .container--tecs {
         flex-direction: column;
+    }
+
+    .container--tecs {
+        margin: 25px 45px 0px 45px;
+    }
+
+    .ct--gp--msg {
+        text-align: center;
     }
 
     .ct--img {
@@ -577,11 +606,103 @@ footer a {
         width: 70px;
         margin-bottom: 20px;
     }
+
+    #sv, #tc {
+        height: auto;
+    }
+
+    .bg--all {   
+        background-image: linear-gradient(180deg, #eeeeee 18%, #0575e6 75%, #080a0b 95%);
+    }
 }
 
 @media screen and (max-width: 540px){
-    
+    header nav {
+        display: flex;
+        flex-direction: column;
+        height: 60px;
+        justify-content: center;
+    }
+
+    #hm h1 {
+        font-size: 25px;
+    }
+
+    #hm h1 span {
+        font-size: 35px;
+    }
+
+    .menu--mobile {
+        display: flex;
+    }
+
+    nav ul {
+        display:none;
+        background-color: #f7f7f7;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        width: auto;
+        margin: 0px;
+        transition: all .5s ease;
+        overflow: hidden;
+    }
+
+    nav ul li {
+        padding: 10px;
+    }
+
+    li a {
+        display: block;
+    }
+
     .am-di {
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    .am-di-img {
+        margin-left: 0;
+        height: 150px;
+        min-height: 150px;
+        width: 150px;
+    }
+
+    #hm h1 {
+        margin-left: 0;
+    }
+
+    .tec-icon-area {
+        margin: 15px;
+    }
+
+    .tecs--area {
+        max-height: 300px;
+        justify-content: center;
+    }
+
+    #ct {
+        height: auto;
+    }
+
+    .ct--gp {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 40px;
+    }
+
+    .ct--gp--msg {
+        margin-right: 0px;
+    }
+
+    form {
+        flex: 1;
+    }
+
+    .form--group {
+        display: flex;
         flex-direction: column;
     }
 

@@ -12,11 +12,13 @@ let numberSliderItems;
 slider.style.marginLeft = `${marginSlideConfig / 2}px`;
 sliderItems.forEach(item => {
     item.style.marginRight = `${marginSlideConfig}px`;
+    item.style.marginLeft = '0px';
 });
 
 window.addEventListener('resize', () => {
     numberSliderItems = numberOfSliderItemsRelatedToScreenWidth();
     setWidthSliderItems(numberSliderItems);
+    $$('.slider--item')[0].style.marginLeft = `-${widthSlideItem + marginSlideConfig}px`;
     setWidthSliderWidth();
 });
 
@@ -43,32 +45,29 @@ function setWidthSliderWidth() {
     $('.slider--width').style.width = `${totalSlides * (widthSlideItem + marginSlideConfig)}px`;
 }
 
-function goPrev(){
-    updateMargin(2);
-}
-
 function goNext(){
     updateMargin(1);
+}
+
+function goPrev(){
+    updateMargin(2);
 }
 
 function updateMargin(control){
     const slides = $$('.slider--item');
     if(control === 1){
-        slides[0].style.marginLeft = `-${$('.slider--item').offsetWidth + marginSlideConfig}px`;
+        slides[1].style.marginLeft = `-${widthSlideItem + marginSlideConfig}px`;
         setTimeout(()=>{
             slider.appendChild(slides[0]);
             $$('.slider--item')[slides.length - 1].style.marginLeft = "0px";
-        }, 500);
-        
+        }, 100);  
     }
     if(control === 2){
-        slider.prepend(slides[slides.length - 1]);
-        $$('.slider--item')[0].style.transition = "none";
-        $$('.slider--item')[0].style.marginLeft = `-${$('.slider--item').offsetWidth + marginSlideConfig}px`;
+        $$('.slider--item')[0].style.marginLeft = "0px";
         setTimeout(()=>{
-            $$('.slider--item')[0].style.transition = "all ease 0.5s";
-            $$('.slider--item')[0].style.marginLeft = "0px";
-        }, 1);  
+            slides[slides.length - 1].style.marginLeft = `-${widthSlideItem + marginSlideConfig}px`;
+            slider.prepend(slides[slides.length - 1]);
+        }, 100);  
     } 
 }
 
@@ -78,3 +77,15 @@ sliderControl[1].addEventListener('click', goNext);
 numberSliderItems = numberOfSliderItemsRelatedToScreenWidth();
 setWidthSliderItems(numberSliderItems);
 setWidthSliderWidth();
+
+slider.prepend(sliderItems[sliderItems.length - 1]);
+$$('.slider--item')[0].style.marginLeft = `-${widthSlideItem + marginSlideConfig}px`;
+
+window.addEventListener('load', ()=>{
+    sliderItems.forEach(item => {
+        item.style.transition = "all ease 0.5s";
+    });
+    for(i = 0; i < totalSlides; i++){
+        sliderControl[1].addEventListener('click', goNext);
+    }
+});
