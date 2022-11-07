@@ -85,7 +85,4 @@ window.addEventListener('load', ()=>{
     sliderItems.forEach(item => {
         item.style.transition = "all ease 0.5s";
     });
-    for(i = 0; i < totalSlides; i++){
-        sliderControl[1].addEventListener('click', goNext);
-    }
 });
