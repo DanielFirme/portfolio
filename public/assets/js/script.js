@@ -18,6 +18,10 @@ $$('header a').forEach(a=>{
     });
 });
 
+$('.menu--mobile').addEventListener('click', ()=>{
+    $('nav ul').classList.toggle('ulActive'); 
+});
+
 window.addEventListener('scroll', ()=>{
     
     menuItemActiveScroll();

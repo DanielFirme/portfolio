@@ -629,6 +629,14 @@ footer a {
 }
 
 @media screen and (max-width: 770px){
+
+    header nav {
+        overflow-x: auto;
+    }
+
+    header .logo {
+        min-width: 315px;
+    }
     
     .sv-info {
         max-height: 380px;
@@ -677,6 +685,8 @@ footer a {
 
     #hm h1 {
         font-size: 25px;
+        letter-spacing: 1.5px;
+        line-height: 35px;
     }
 
     #hm h1 span {
@@ -699,6 +709,10 @@ footer a {
         margin: 0px;
         transition: all .5s ease;
         overflow: hidden;
+    }
+
+    .ulActive {
+        display: flex;
     }
 
     nav ul li {
@@ -778,6 +792,12 @@ footer a {
 
 @media screen and (max-width: 400px) {
     header .logo a {
-        font-size: 21px;
+        font-size: 20px;
+    }
+    header .logo {
+        min-width: 100px;
+    }
+    .btn-grad {
+        padding: 15px 10px;
     }   
 }
