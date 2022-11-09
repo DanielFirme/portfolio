@@ -1,7 +1,7 @@
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
-
+const menuMobile = $('nav ul');
 let mousePositionY, mousePositionX;
 
 $$('header a').forEach(a=>{
@@ -15,34 +15,55 @@ $$('header a').forEach(a=>{
             left: 0,
             behavior: "smooth"
         });
+        menuMobile.classList.remove('ulActive');
     });
 });
 
 $('.menu--mobile').addEventListener('click', ()=>{
-    $('nav ul').classList.toggle('ulActive'); 
+    menuMobile.classList.toggle('ulActive');
+});
+
+window.addEventListener('resize', ()=>{
+    const bodyWidth = document.body.clientWidth;
+    const condition = bodyWidth > 540;
+    headerTopPosition(condition);
+    if(condition){
+        menuMobile.classList.remove('ulActive');
+    }
 });
 
 window.addEventListener('scroll', ()=>{
     
     menuItemActiveScroll();
 
-    if(mousePositionX >= document.body.clientWidth){
-        mousePositionY = -($('body').getBoundingClientRect().top);
-        (mousePositionY >= 80) ? $('header').style.top = '-80px' : $('header').style.top = '0'; 
-    }else {
-        (mousePositionY >= 80 && window.scrollY >= 80) ? $('header').style.top = '-80px' : $('header').style.top = '0';
-    } 
+    const bodyWidth = document.body.clientWidth;
+
+    if (bodyWidth > 540) {
+        if(mousePositionX >= bodyWidth){
+            mousePositionY = -($('body').getBoundingClientRect().top);
+            headerTopPosition(mousePositionY >= 80); 
+        }else {
+            headerTopPosition(mousePositionY >= 80 && window.scrollY >= 80);
+        } 
+    }
+     
 });
 
 window.addEventListener('mousemove', (e)=>{
     mousePositionY = e.clientY;
     mousePositionX = e.clientX;
-    if(mousePositionY >= 80 && window.scrollY >= 10){
-        $('header').style.top = '-80px';
-    }else {
-        $('header').style.top = '0';
+    const bodyWidth = document.body.clientWidth;
+
+    if (bodyWidth > 540) {
+        headerTopPosition(mousePositionY >= 80 && window.scrollY >= 10);
     }
 });
+
+function headerTopPosition(condition){
+    (condition)
+        ? $('header').style.top = '-80px' 
+        : $('header').style.top = '0';
+}
 
 function menuItemActiveScroll() {
     const hrefAMenu = [...$$('section')].map(e => {

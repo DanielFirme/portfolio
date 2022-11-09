@@ -4,7 +4,7 @@ $$ = document.querySelectorAll.bind(document);
 const sliderItems = $$('.slider--item');
 const totalSlides = sliderItems.length;
 const slider = $('.slider--width');
-const sliderControl = $$('.slider--control');
+const sliderControl = $$('.slider--control img');
 const marginSlideConfig = 15;
 let widthSlideItem; 
 let numberSliderItems;

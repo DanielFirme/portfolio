@@ -403,7 +403,11 @@ section {
 
 .slider--control img {
     width: 45px;
+    opacity: 0.7;
+}
 
+.slider--control img:hover {
+    opacity: 1;
 }
 
 .sc--img--1 {
@@ -713,6 +717,10 @@ footer a {
 
     .ulActive {
         display: flex;
+    }
+
+    .headerTop {
+        top: 0;
     }
 
     nav ul li {
