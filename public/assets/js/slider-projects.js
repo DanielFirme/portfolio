@@ -12,7 +12,6 @@ let numberSliderItems;
 slider.style.marginLeft = `${marginSlideConfig / 2}px`;
 sliderItems.forEach(item => {
     item.style.marginRight = `${marginSlideConfig}px`;
-    item.style.marginLeft = '0px';
 });
 
 window.addEventListener('resize', () => {

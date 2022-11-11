@@ -434,7 +434,6 @@ section {
 }
 
 .slider--item {
-    margin-right: 10px;
     border-radius: 40px;
     display: flex;
     flex-direction: column;
