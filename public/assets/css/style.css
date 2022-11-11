@@ -619,27 +619,68 @@ footer a {
 .menu--mobile {
     display: none;
     flex-direction: column;
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .mm--line {
     background-color: #0b0c15;
-    height: 3px;
+    height: 4px;
     width: 100%;
     border-radius: 3px;
+    transition: all .3s ease;
 }
 
-@media screen and (max-width: 770px){
+@media screen and (max-width: 820px){
 
-    header nav {
-        overflow-x: auto;
+    .menu--mobile {
+        display: flex;
+    }
+
+    .icon--close--1 {
+        transform-origin: left;
+        transform: rotate(45deg) scale(1.25, 1);
+    }
+
+    .icon--close--2 {
+        opacity: 0;
+    }
+
+    .icon--close--3 {
+        transform-origin: left;
+        transform: rotate(-45deg) scale(1.25, 1);
+    }
+
+    header {
+        justify-content: space-between;
     }
 
     header .logo {
         min-width: 315px;
+    }
+
+    header nav {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        height: 0px;
+        transition: height .5s ease;
+        overflow: hidden;
+    }
+
+    nav ul {
+        background-color: #f7f7f7;
+        justify-content: space-around;
+        width: auto;
+        margin: 0px;
+        padding-bottom: 10px;
+    }
+
+    .navActive {
+        height: 40px; 
     }
     
     .sv-info {
@@ -679,14 +720,7 @@ footer a {
     }
 }
 
-@media screen and (max-width: 540px){
-    header nav {
-        display: flex;
-        flex-direction: column;
-        height: 60px;
-        justify-content: center;
-    }
-
+@media screen and (max-width: 660px){
     #hm h1 {
         font-size: 25px;
         letter-spacing: 1.5px;
@@ -697,26 +731,13 @@ footer a {
         font-size: 35px;
     }
 
-    .menu--mobile {
-        display: flex;
-    }
-
     nav ul {
-        display:none;
-        background-color: #f7f7f7;
         flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        right: 0;
-        width: auto;
-        margin: 0px;
-        transition: all .5s ease;
-        overflow: hidden;
+        padding-bottom: 2px;
     }
 
-    .ulActive {
-        display: flex;
+    .navActive {
+       height: 254px; 
     }
 
     .headerTop {
