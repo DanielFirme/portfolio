@@ -394,24 +394,25 @@ section {
 }
 
 .slider--control.sc--1 {
-    left: 5px;
+    left: 10px;
 }
 
 .slider--control.sc--2 {
-    right: 5px;
+    right: 10px;
 }
 
-.slider--control img {
-    width: 45px;
-    opacity: 0.7;
+.slider--control svg {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
 
-.slider--control img:hover {
-    opacity: 1;
+.slider--control svg:hover {
+    background-color: #398ee4;
 }
 
-.sc--img--1 {
-    transform: rotate(180deg);
+.slider--control svg:hover polyline {
+    stroke: #FFF;
 }
 
 .slider {

@@ -2,12 +2,11 @@ $ = document.querySelector.bind(document);
 $$ = document.querySelectorAll.bind(document);
 
 const sliderItems = $$('.slider--item');
-const totalSlides = sliderItems.length;
 const slider = $('.slider--width');
-const sliderControl = $$('.slider--control img');
+const sliderControl = $$('.slider--control svg');
 const marginSlideConfig = 15;
-let widthSlideItem; 
-let numberSliderItems;
+let widthTaskBox; 
+let numberTasksBoxsOnScreen;
 
 slider.style.marginLeft = `${marginSlideConfig / 2}px`;
 sliderItems.forEach(item => {
@@ -15,13 +14,13 @@ sliderItems.forEach(item => {
 });
 
 window.addEventListener('resize', () => {
-    numberSliderItems = numberOfSliderItemsRelatedToScreenWidth();
-    setWidthSliderItems(numberSliderItems);
-    $$('.slider--item')[0].style.marginLeft = `-${widthSlideItem + marginSlideConfig}px`;
+    numberTasksBoxsOnScreen = numberOfTasksBoxsRelatedToScreenWidth();
+    setWidthTaskBox(numberTasksBoxsOnScreen);
+    $$('.slider--item')[0].style.marginLeft = `-${widthTaskBox + marginSlideConfig}px`;
     setWidthSliderWidth();
 });
 
-function numberOfSliderItemsRelatedToScreenWidth(){
+function numberOfTasksBoxsRelatedToScreenWidth(){
     const screenWidth = $('body').clientWidth;
     if(screenWidth >= 840){
         return 3;
@@ -32,16 +31,16 @@ function numberOfSliderItemsRelatedToScreenWidth(){
     }
 }
 
-function setWidthSliderItems(numberSliderItems) {
+function setWidthTaskBox(numberSliderItems) {
     const widthSlider = $(".slider").offsetWidth;
-    widthSlideItem = (widthSlider / numberSliderItems) - marginSlideConfig;
+    widthTaskBox = (widthSlider / numberSliderItems) - marginSlideConfig;
     sliderItems.forEach(item => {
-        item.style.width = `${widthSlideItem}px`;
+        item.style.width = `${widthTaskBox}px`;
     });
 }
 
 function setWidthSliderWidth() {
-    $('.slider--width').style.width = `${totalSlides * (widthSlideItem + marginSlideConfig)}px`;
+    $('.slider--width').style.width = `${totalSlides * (widthTaskBox + marginSlideConfig)}px`;
 }
 
 function goNext(){
@@ -55,7 +54,7 @@ function goPrev(){
 function updateMargin(control){
     const slides = $$('.slider--item');
     if(control === 1){
-        slides[1].style.marginLeft = `-${widthSlideItem + marginSlideConfig}px`;
+        slides[1].style.marginLeft = `-${widthTaskBox + marginSlideConfig}px`;
         setTimeout(()=>{
             slider.appendChild(slides[0]);
             $$('.slider--item')[slides.length - 1].style.marginLeft = "0px";
@@ -64,7 +63,7 @@ function updateMargin(control){
     if(control === 2){
         $$('.slider--item')[0].style.marginLeft = "0px";
         setTimeout(()=>{
-            slides[slides.length - 1].style.marginLeft = `-${widthSlideItem + marginSlideConfig}px`;
+            slides[slides.length - 1].style.marginLeft = `-${widthTaskBox + marginSlideConfig}px`;
             slider.prepend(slides[slides.length - 1]);
         }, 100);  
     } 
@@ -73,12 +72,16 @@ function updateMargin(control){
 sliderControl[0].addEventListener('click', goPrev);
 sliderControl[1].addEventListener('click', goNext);
 
-numberSliderItems = numberOfSliderItemsRelatedToScreenWidth();
-setWidthSliderItems(numberSliderItems);
-setWidthSliderWidth();
 
 slider.prepend(sliderItems[sliderItems.length - 1]);
-$$('.slider--item')[0].style.marginLeft = `-${widthSlideItem + marginSlideConfig}px`;
+const totalSlides = sliderItems.length;
+
+numberTasksBoxsOnScreen = numberOfTasksBoxsRelatedToScreenWidth();
+setWidthTaskBox(numberTasksBoxsOnScreen);
+setWidthSliderWidth();
+
+$$('.slider--item')[0].style.marginLeft = `-${widthTaskBox + marginSlideConfig}px`;
+
 
 window.addEventListener('load', ()=>{
     sliderItems.forEach(item => {
