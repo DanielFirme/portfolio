@@ -1,8 +1,15 @@
 $ = document.querySelector.bind(document); 
 $$ = document.querySelectorAll.bind(document);
 
-const sliderItems = $$('.slider--item');
+let sliderItems = $$('.slider--item');
 const slider = $('.slider--width');
+sliderItems.forEach(item => {
+    const cloneItem = item.cloneNode(true);
+    cloneItem.setAttribute('data-info', 'cloned');
+    slider.appendChild(cloneItem);
+
+});
+sliderItems = $$('.slider--item');
 const sliderControl = $$('.slider--control svg');
 const marginSlideConfig = 15;
 let widthTaskBox; 
