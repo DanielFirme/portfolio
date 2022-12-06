@@ -1,6 +1,0 @@
-This favicon was generated using the following font:
-
-- Font Title: Michroma
-- Font Author: vernon adams
-- Font Source: http://fonts.gstatic.com/s/michroma/v16/PN_zRfy9qWD8fEagAMg6rzjb_-Da.ttf
-- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
