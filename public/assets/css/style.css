@@ -103,12 +103,26 @@ section {
     color: white;            
     box-shadow: 0 0 20px #eeeeee;
     display: block;
+    animation: gradMove 3s ease;
 }
 
-.btn-grad:hover {
-    background-position: right center; /* change the direction of the change here */
+/* .btn-grad:hover {
+    background-position: right center; change the direction of the change here
     color: #fff;
     text-decoration: none;
+} */
+
+@keyframes gradMove {
+    0% {
+        background-position: left center;
+    }
+    50% {
+        background-position: right center;
+    }
+    100% {
+        background-position: left center;
+    }
+
 }
 
 #hm h1 {
@@ -120,11 +134,22 @@ section {
     letter-spacing: 2.5px;
     line-height: 55px;
     text-align: left;
+    animation: textMove 2s forwards;
 }
 
-#hm h1 span {
+#hm h1 .web-dev {
     font-size: 55px; 
     font-weight:700;
+}
+
+@keyframes textMove {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .hm-social-icons {
@@ -427,37 +452,32 @@ section {
 .slider {
     overflow: hidden;
     flex: 1;
-    min-height: 300px;
-    max-height: 340px;
     width: 80%;
     margin: 50px 25px 50px 25px;
     position: relative;
     display: flex;
-    flex-direction: column;
+    align-items: center;
 }
 
 .slider--width {
     position: absolute;
     margin-left: 5px;
-    height: 100%;
     display: flex;
 }
 
 .slider--item {
-    border-radius: 40px;
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
     background-color: #f7f7f7;
+    position: relative;
 }
 
 .slider--item .pj--img {
     width: 100%;
-    height: 65%;
     overflow: hidden;
-    padding: 20px;
-    background-color: #000000;
-    
+    background-color: #021B79;
 }
 
 .pj--img img {
@@ -467,18 +487,26 @@ section {
     transition: all .5s ease;
 }
 
-.pj--img img:hover {
-    transform: scale(1.05);
-}
-
 .slider--item .pj--desc {
     width: 100%;
-    height: 35%;
+    position: absolute;
+    bottom: -100%;
+    transition: all .5s ease;
+}
+
+.slider--item:hover .pj--desc{
+    bottom: 0;
+}
+
+.slider--item:hover img {
+    opacity: .5;
+    transform: scale(1.05);
 }
 
 .pj--desc p {
     padding: 10px;
     font-size: 14px;
+    color: #FFF;
 }
 
 #ct {
@@ -739,7 +767,7 @@ footer a {
         line-height: 35px;
     }
 
-    #hm h1 span {
+    #hm h1 .web-dev {
         font-size: 35px;
     }
 
