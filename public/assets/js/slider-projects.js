@@ -29,7 +29,7 @@ window.addEventListener('resize', () => {
 
 function numberOfTasksBoxsRelatedToScreenWidth(){
     const screenWidth = $('body').clientWidth;
-    if(screenWidth >= 540){
+    if(screenWidth > 768){
         return 2;
     } else {
         return 1;
