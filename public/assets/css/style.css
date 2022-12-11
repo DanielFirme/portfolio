@@ -451,9 +451,9 @@ section {
 }
 
 .slider {
-    overflow: hidden;
-    flex: 1;
     width: 80%;
+    height: auto;
+    overflow: hidden;
     margin: 50px 25px 50px 25px;
     position: relative;
     display: flex;

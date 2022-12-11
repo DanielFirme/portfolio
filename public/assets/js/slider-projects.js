@@ -25,6 +25,7 @@ window.addEventListener('resize', () => {
     setWidthTaskBox(numberTasksBoxsOnScreen);
     $$('.slider--item')[0].style.marginLeft = `-${widthTaskBox + marginSlideConfig}px`;
     setWidthSliderWidth();
+    setHeightSlider();
 });
 
 function numberOfTasksBoxsRelatedToScreenWidth(){
@@ -46,6 +47,11 @@ function setWidthTaskBox(numberSliderItems) {
 
 function setWidthSliderWidth() {
     $('.slider--width').style.width = `${totalSlides * (widthTaskBox + marginSlideConfig)}px`;
+}
+
+function setHeightSlider(){
+    const heightSliderItem = $$(".slider--item")[0].offsetHeight;
+    $(".slider").style.height = `${heightSliderItem + marginSlideConfig}px`;
 }
 
 function goNext(){
@@ -85,6 +91,7 @@ numberTasksBoxsOnScreen = numberOfTasksBoxsRelatedToScreenWidth();
 setWidthTaskBox(numberTasksBoxsOnScreen);
 setWidthSliderWidth();
 
+
 $$('.slider--item')[0].style.marginLeft = `-${widthTaskBox + marginSlideConfig}px`;
 
 
@@ -92,4 +99,5 @@ window.addEventListener('load', ()=>{
     sliderItems.forEach(item => {
         item.style.transition = "all ease 0.5s";
     });
+    setHeightSlider();
 });
