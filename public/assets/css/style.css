@@ -510,6 +510,7 @@ section {
     padding: 10px;
     font-size: 14px;
     color: #FFF;
+    text-shadow: 1px 1px 3px #c0c0c0;
 }
 
 .pj--desc-link {
@@ -518,10 +519,11 @@ section {
     text-decoration: none;
     letter-spacing: .1rem;
     background: #0052D4;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #0052D4, #4364F7, #6FB1FC);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #0052D4, #4364F7, #6FB1FC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to right, #0575E6 0%, #021B79  51%, #0575E6  100%);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0575E6 0%, #021B79  51%, #0575E6  100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: 200%;
     padding: 1rem 2rem;
-    border: none;
+    border: 1px solid transparent;
     border-radius: 5px;
     height: 3rem;
     transition: all .5s ease;
@@ -532,6 +534,7 @@ section {
 .pj--desc-link:hover {
     color: #d8d8d8;
     border: 1px solid #0052D4;
+    background-position: right center;
 }
 
 #ct {
