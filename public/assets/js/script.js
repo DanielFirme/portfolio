@@ -85,7 +85,7 @@ function menuItemActiveScroll() {
             return "";
         }
     }).join('');
-    
+    console.log(hrefAMenu);
     if(hrefAMenu !== ''){
         menuItemActive(hrefAMenu);
     }
