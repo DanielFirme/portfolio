@@ -22,7 +22,11 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- needed for bounce animation -->
+    <link rel="stylesheet" href="assets/lib/animate/animate.min.css">
 </head>
 <body>
     <header>
@@ -65,10 +69,10 @@
         <h2>Sobre mim</h2>
         <div class="am-description">
             <div class="am-di">
-                <div class="am-di-img">
+                <div class="am-di-img wow slideInLeft" data-wow-duration="1.4s" data-wow-delay="">
                     <img src="assets/images/FB_20150204_18_26_47_Saved_Picture.jpg"/>
                 </div>
-                <div class="am-desc">
+                <div class="am-desc wow slideInRight" data-wow-duration="1.4s" data-wow-delay="0.9s">
                     <p>
                         Sou formado em engenharia de controle e automação, mas sempre gostei muito da área de programação. Atualmente, estou desenvolvendo projetos de Front-End enquanto vou adquirindo habilidades em Back-End e Mobile para, muito em breve, ser um desenvolvedor Full Stack.
                     </p>
@@ -81,7 +85,7 @@
         <section id="sv">
             <h2>Serviços</h2>
             <div class="container--sv">
-                <div class="sv-info">
+                <div class="sv-info wow bounceInUp" data-wow-duration="1.4s">
                     <div class="sv--img">
                         <img src="assets/images/web-design.png"/>
                     </div>
@@ -93,7 +97,7 @@
                         <br><br> Os sites são <strong>responsivos</strong>, o que significa que eles se adaptam automaticamente a quaisquer tamanhos de tela, mantendo-se sempre bonitos e funcionais seja no computador, tablet ou smartphone, o que garante uma boa experiência para o usuário.</p> 
                     </div>
                 </div>
-                <div class="sv-info">
+                <div class="sv-info wow bounceInUp" data-wow-duration="1.4s" data-wow-delay="0.5s">
                     <div class="sv--img">
                         <img src="assets/images/responsive.png"/>
                     </div>
@@ -104,7 +108,7 @@
                         <p style="padding-top: 60px;">Em breve.</p>
                     </div>
                 </div>
-                <div class="sv-info">
+                <div class="sv-info wow bounceInUp" data-wow-duration="1.4s" data-wow-delay="0.7s">
                     <div class="sv--img">
                         <img src="assets/images/programming.png"/>
                     </div>
@@ -265,6 +269,16 @@
     <footer>
         Criado por <a href="" target="_blank" title="linkedin">Daniel Firme</a>
     </footer>
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <!-- needed to make easeInOutExpo effect -->
+    <script src="assets/lib/jquery/jquery.min.js"></script>
+    <script src="assets/lib/jquery/jquery-migrate.min.js"></script>
+    <script src="assets/lib/easing/easing.min.js"></script>
+    
+    <!-- needed for bounce animation -->
+    <script src="assets/lib/wow/wow.min.js"></script>
+
+
     <script src="assets/js/slider-projects.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
