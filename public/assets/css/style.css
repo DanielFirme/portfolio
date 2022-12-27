@@ -1,6 +1,8 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;400;600;700&display=swap');
 
 * {
     margin: 0;
@@ -87,16 +89,6 @@ section {
     flex-direction: column;
 }
 
-/* #hm {
-    height: 555px;
-    
-    background-color: #0a0101;
-    background-image: linear-gradient(0deg, #0a0101 0%, #6038dc 50%, #ffffff 100%);
-
-    background: rgb(247,247,247);
-    background: linear-gradient(180deg, rgba(247,247,247,1) 0%, rgba(7,0,77,1) 100%);background: linear-gradient(180deg, rgba(247,247,247,1) 0%, rgba(7,0,77,1) 100%);
-} */
-
 .btn-grad {
     background-image: linear-gradient(to right, #0575E6 0%, #021B79  51%, #0575E6  100%);
     padding: 15px 45px;
@@ -109,12 +101,6 @@ section {
     display: block;
     animation: gradMove 3s ease;
 }
-
-/* .btn-grad:hover {
-    background-position: right center; change the direction of the change here
-    color: #fff;
-    text-decoration: none;
-} */
 
 @keyframes gradMove {
     0% {
@@ -267,21 +253,7 @@ section {
 }
 
 .bg--all {   
-
-    /* background-color: #eeeeee;
-    background-image: linear-gradient(180deg, #eeeeee 19%, #0575e6 54%, #021b79 78%, #080a0b 97%);
-
     background-color: #eeeeee;
-    background-image: linear-gradient(180deg, #eeeeee 18%, #0575e6 53%, #021b79 79%, #080a0b 88%);
-
-    background-color: #eeeeee;
-    background-image: linear-gradient(180deg, #eeeeee 18%, #0575e6 54%, #080a0b 78%);
-
-    background-color: #eeeeee;
-    background-image: linear-gradient(180deg, #eeeeee 18%, #0575e6 71%, #080a0b 74%); */ 
-
-    background-color: #eeeeee;
-    /* background-image: linear-gradient(180deg, #eeeeee 18%, #0575e6 75%, #080a0b 75%); */   
     background-image: linear-gradient(180deg, #eeeeee 18%, #0575e6 75%, #080a0b 95%);
 
 }
