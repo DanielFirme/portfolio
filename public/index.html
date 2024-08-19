@@ -25,6 +25,18 @@
     
     <!-- needed for bounce animation -->
     <link rel="stylesheet" href="assets/lib/animate/animate.min.css">
+
+    <script async type="application/javascript" src="https://news.google.com/swg/js/v1/swg-basic.js"></script>
+    <script>
+      (self.SWG_BASIC = self.SWG_BASIC || []).push( basicSubscriptions => {
+        basicSubscriptions.init({
+          type: "NewsArticle",
+          isPartOfType: ["Product"],
+          isPartOfProductId: "CAowwuHYCw:openaccess",
+          clientOptions: { theme: "light", lang: "pt-BR" },
+        });
+      });
+    </script>
 </head>
 <body>
     <header>
